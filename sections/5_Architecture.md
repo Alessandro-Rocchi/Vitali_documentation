@@ -2,20 +2,21 @@
 
 ## 5.1 Decoupled Data Model Architecture
 
-To optimize DOM rendering and network payload, the application strictly decouples spatial geometry from narrative richness:
+To optimize initial page load times, minimize network payloads, and ensure clean separation of concerns, spatial definitions and narrative cultural metadata are strictly decoupled.
 
+```
 [ HTTP Initial Request ]
-|
-+---> Fetch data/paris.geojson  (~15 KB payload, fast spatial indexing)
-|
+       |
+       +---> Fetch `data/paris.geojson`  (~15 KB payload: fast spatial indexing)
+       |
 [ User Interaction: Marker Click ]
-|
-+---> Asynchronous Fetch / Lookup in data/paris_metadata.json
-(Loads high-resolution imagery & tiered textual descriptions)
+       |
+       +---> Asynchronous Fetch / Lookup in `data/paris_metadata.json` 
+             (Loads high-resolution imagery & tiered textual descriptions)
+```
 
-## 5.2 Spatial Specification (`data/paris.geojson`)
-
-RFC 7946-compliant GeoJSON containing geometric definitions and primary filter indexes:
+### 5.2 Spatial Specification (`data/paris.geojson`)
+RFC 7946-compliant GeoJSON format storing point coordinates and lightweight indexing properties:
 
 ```json
 {
@@ -40,10 +41,12 @@ RFC 7946-compliant GeoJSON containing geometric definitions and primary filter i
     }
   ]
 }
-5.3 Narrative Metadata Specification (data/paris_metadata.json)
-Hierarchically organized metadata implementing the Progressive Disclosure Pattern:
+```
 
-JSON
+### 5.3 Narrative Metadata Specification (`data/paris_metadata.json`)
+Hierarchically organized metadata implementing the **Progressive Disclosure Pattern**:
+
+```json
 {
   "cafe_du_dome": {
     "title": "Café du Dôme — Cléo de 5 à 7",
@@ -62,3 +65,4 @@ JSON
     }
   }
 }
+```

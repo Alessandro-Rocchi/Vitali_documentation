@@ -1,8 +1,10 @@
-# 6. Interaction Design & UI/UX Specifications
+## 6. Interaction Design & UI/UX Specifications
 
-## 6.1 Progressive Information Disclosure Pattern
-To prevent cognitive overload on mobile devices and small viewports, information is presented in three escalating tiers:
+### 6.1 Progressive Information Disclosure Pattern
 
+To prevent cognitive overload, particularly on mobile viewports, film data is revealed across three distinct user interaction stages:
+
+```
 +---------------------------------------------------------------------------------+
 | LEVEL 1: Map Marker Popup (Instant Glance)                                      |
 | - Location Name + Film Title + Year                                            |
@@ -24,7 +26,11 @@ To prevent cognitive overload on mobile devices and small viewports, information
 | - Detailed Film Theory Analysis + Cinematographic Technique Notes               |
 | - Full Resolution Still Comparison Slider + Bibliographic References            |
 +---------------------------------------------------------------------------------+
-6.2 Application Sitemap & Page Hierarchy
+```
+
+### 6.2 Application Site Map & Structure
+
+```
                                 [ Home / Root ]
                                        |
          +-----------------+-----------+-----------+-----------------+
@@ -38,3 +44,4 @@ To prevent cognitive overload on mobile devices and small viewports, information
                                               |                      |
                                    [ about_nouvelle_vague.html ]  [ about_our_team.html ]
                                    - Historical Film Essay        - Team & Attributions
+```

@@ -1,8 +1,9 @@
 # 8. DevOps, CI/CD & Deployment Pipeline
-The platform is maintained under continuous integration and deployment using GitHub Actions. Any commit merged into the main branch triggers automated linting, artifact packaging, and deployment to GitHub Pages.
 
-YAML
-#.github/workflows/deploy-pages.yml
+The platform is maintained under continuous integration and deployment using GitHub Actions. Any commit merged into the `main` branch triggers automated linting, artifact packaging, and deployment to GitHub Pages.
+
+```yaml
+# .github/workflows/deploy-pages.yml
 name: Deploy GitHub Pages site
 
 on:
@@ -40,3 +41,4 @@ jobs:
       - name: Deploy to Global CDN
         id: deployment
         uses: actions/deploy-pages@v4
+```

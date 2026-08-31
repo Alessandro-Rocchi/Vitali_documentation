@@ -13,17 +13,27 @@ Before defining the application's architecture, we analyzed existing solutions i
 * **Traditional Tourist Guides (Print or Apps):**
   * *Limitations:* Print guides lack dynamic, real-time geolocation. Generic tourism apps rarely offer highly specific cinematic filters (e.g., filtering a city walk exclusively by "Director" or "Production Year").
 
+| Dimension / Feature | IMDb Locations | Google Maps / Earth | Movie-Locations.com | **Les Rues du CSS** (Ours) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Spatial Interactivity** | None (Flat text list) | High (Generic maps) | Low (Static map embed) | **High (Custom Leaflet Canvas)** |
+| **Thematic Focus** | Global (Unfiltered) | Commercial POIs | General Cinema | **Specialized Nouvelle Vague** |
+| **Progressive Disclosure** | None | None | None | **3-Tier Dynamic Loading** |
+| **Topological Routing** | None | Generic Navigation | None | **Dynamic Walking Tour Engine** |
+| **Comparative Imagery** | User photos (loose) | User Street View | Film stills only | **Curated Archival vs. Modern Stills**|
+| **Data Decoupling** | Monolithic DB | Monolithic DB | Server-side CMS | **Decoupled GeoJSON + JSON Meta** |
+
 **Our Unique Selling Proposition (USP):**
 Unlike existing competitors, *Les Rues du CSS* merges a highly specialized, curated database with advanced geographic interactivity. Instead of merely displaying disconnected points of interest, the platform actively links places and aesthetics. It offers granular filters (by author, by decade) and dynamically traces itineraries (using routing algorithms) to let users physically walk the sets of the French New Wave.
 
 ## 2.2 User Personas & Scenarios
 
+```
 +-----------------------------------------------------------------------------+
 | USER PERSONA MATRIX                                                         |
 +---------------------+-----------------------+-------------------------------+
 | Persona Profile     | Primary Need          | Platform Solution             |
 +---------------------+-----------------------+-------------------------------+
-| Dr. Elena Rossi     | Comparative spatial   | Filter by Director (e.g.      |
+| Dr. Elena Rossi     | Comparative spatial   | Filter by Director (e.g.,     |
 | (Film Researcher)   | analysis of Left Bank | Varda) + Level 3 Detailed     |
 |                     | vs Right Bank films.  | Academic metadata modal.      |
 +---------------------+-----------------------+-------------------------------+
@@ -35,3 +45,4 @@ Unlike existing competitors, *Les Rues du CSS* merges a highly specialized, cura
 | (Cinephile Student) | archival vs modern    | with side-by-side photo       |
 |                     | filming locations.    | comparisons and sorting.      |
 +---------------------+-----------------------+-------------------------------+
+```

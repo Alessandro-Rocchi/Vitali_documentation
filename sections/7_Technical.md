@@ -1,20 +1,17 @@
-# 7. Technical Implementation & Software Architecture
+# 8. Technical Implementation & Software Architecture
 
-7.1 Tech Stack Justification
-HTML5: Semantic landmark tags (<main>, <nav>, <section>, <article>, <aside>) ensure SEO indexability and screen-reader accessibility.
+## 8.1 Core Technology Stack
 
-CSS3 & Bootstrap 5: Mobile-first responsive grid system augmented by custom BEM (Block-Element-Modifier) stylesheets.
+* **HTML5:** Semantic landmark tags (`<main>`, `<nav>`, `<section>`, `<article>`, `<aside>`) ensure SEO indexability and screen-reader accessibility.
+* **CSS3 & Bootstrap 5:** Mobile-first responsive grid system augmented by custom BEM (Block-Element-Modifier) stylesheets.
+* **Vanilla ES6+ JavaScript:** Zero-dependency core logic avoids framework obsolescence, maximizes execution speed, and demonstrates foundational programming competencies.
+* **Leaflet.js:** Lightweight (42KB) mapping library ideal for custom tile layers and GeoJSON rendering.
 
-Vanilla ES6+ JavaScript: Zero-dependency core logic avoids framework obsolescence, maximizes execution speed, and demonstrates foundational programming competencies.
+## 8.2 Client-Side JavaScript Lifecycle
 
-Leaflet.js: Lightweight (42KB) alternative to heavy GIS suites, ideal for custom tile layers and GeoJSON rendering.
-
-## 7.2 Core Javascript Architecture & Fetch Lifecycle
-
-JavaScript
+```javascript
 /**
-
-    * Core Application Controller Flow (index.html)
+ * Core Application Controller Flow (index.html)
  */
 document.addEventListener('DOMContentLoaded', async () => {
     try {
@@ -52,8 +49,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 
 /**
-    * Progressive Metadata Loader (On-Demand Fetching)
-
+ * Progressive Metadata Loader (On-Demand Fetching)
  */
 async function openDetails(locationId) {
     const metaResponse = await fetch('data/paris_metadata.json');
@@ -73,3 +69,4 @@ async function openDetails(locationId) {
     const bsOffcanvas = new bootstrap.Offcanvas(document.getElementById('detailsDrawer'));
     bsOffcanvas.show();
 }
+```
