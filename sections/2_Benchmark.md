@@ -1,4 +1,6 @@
-# 2. Benchmark & Competitive Advantage
+# 2. Benchmark & User Personas
+
+## 2.1 Benchmark
 
 Before defining the application's architecture, we analyzed existing solutions in the realms of cinematic tourism and urban exploration:
 
@@ -13,3 +15,23 @@ Before defining the application's architecture, we analyzed existing solutions i
 
 **Our Unique Selling Proposition (USP):**
 Unlike existing competitors, *Les Rues du CSS* merges a highly specialized, curated database with advanced geographic interactivity. Instead of merely displaying disconnected points of interest, the platform actively links places and aesthetics. It offers granular filters (by author, by decade) and dynamically traces itineraries (using routing algorithms) to let users physically walk the sets of the French New Wave.
+
+## 2.2 User Personas & Scenarios
+
++-----------------------------------------------------------------------------+
+| USER PERSONA MATRIX                                                         |
++---------------------+-----------------------+-------------------------------+
+| Persona Profile     | Primary Need          | Platform Solution             |
++---------------------+-----------------------+-------------------------------+
+| Dr. Elena Rossi     | Comparative spatial   | Filter by Director (e.g.      |
+| (Film Researcher)   | analysis of Left Bank | Varda) + Level 3 Detailed     |
+|                     | vs Right Bank films.  | Academic metadata modal.      |
++---------------------+-----------------------+-------------------------------+
+| Julien Dupont       | On-the-street cultural| Dynamic Routing feature to    |
+| (Paris Tourist)     | walking tour of       | follow a generated walking    |
+|                     | Godard locations.     | path with mobile geolocation. |
++---------------------+-----------------------+-------------------------------+
+| Marco Bianchi       | Visual discovery of   | Thematic Catalogue view       |
+| (Cinephile Student) | archival vs modern    | with side-by-side photo       |
+|                     | filming locations.    | comparisons and sorting.      |
++---------------------+-----------------------+-------------------------------+
